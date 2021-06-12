@@ -1,0 +1,7 @@
+#!/bin/bash
+#
+# run
+#
+
+echo "Start LMS..."
+squeezeboxserver --u $SLIMUSER --prefsdir /config/prefs --logdir /config/logs --cachedir /config/cache
