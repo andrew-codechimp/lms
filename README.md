@@ -1,4 +1,4 @@
-# Logitech Media Server
+# LMS
 
 Docker image for LMS (Logitech Media Server, SqueezeCenter, SqueezeboxServer, SlimServer)
 
