@@ -14,7 +14,7 @@ ENV DEBCONF_NONINTERACTIVE_SEEN="true" \
 	SLIMUSER="nobody"
 
 COPY init /etc/my_init.d/
-COPY run /etc/service/logitechmediaserver/
+COPY run /etc/service/lms/
 
 RUN rm -rf /etc/service/cron /etc/service/syslog-ng
 
@@ -43,7 +43,7 @@ RUN	lms_download_url="http://downloads.slimdevices.com/LogitechMediaServer_v7.9.
 	dpkg -i $lms_deb
 
 
-RUN	chmod -R +x /etc/service/logitechmediaserver /etc/my_init.d/
+RUN	chmod -R +x /etc/service/lms /etc/my_init.d/
 
 RUN	ln -s /plugins/ /usr/sbin/Plugins
 
