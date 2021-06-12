@@ -1,6 +1,6 @@
 FROM phusion/baseimage:0.9.22
 
-LABEL maintainer="codechimporg"
+LABEL maintainer="andrew-codechimp"
 
 ENV DEBCONF_NONINTERACTIVE_SEEN="true" \
 	DEBIAN_FRONTEND="noninteractive" \
