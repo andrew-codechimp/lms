@@ -35,21 +35,21 @@ RUN	apt-get update && \
 # 	dpkg -i $lms_deb
 
 # Get latest release 7.9.3
-RUN	lms_download_url="http://downloads.slimdevices.com/LogitechMediaServer_v7.9.3/logitechmediaserver_7.9.3_all.deb" && \
-	mkdir -p /sources && \
-	cd /sources && \
-	wget $lms_download_url && \
-	lms_deb=${lms_download_url##*/} && \
-	dpkg -i $lms_deb
-
-# Get latest build for 8.1.2
-# RUN	url="https://www.mysqueezebox.com/update/?version=8.1.2&revision=1&geturl=1&os=deb" && \
-# 	latest_lms=$(wget -q -O - "$url") && \
+# RUN	lms_download_url="http://downloads.slimdevices.com/LogitechMediaServer_v7.9.3/logitechmediaserver_7.9.3_all.deb" && \
 # 	mkdir -p /sources && \
 # 	cd /sources && \
-# 	wget $latest_lms && \
-# 	lms_deb=${latest_lms##*/} && \
+# 	wget $lms_download_url && \
+# 	lms_deb=${lms_download_url##*/} && \
 # 	dpkg -i $lms_deb
+
+# Get latest build for 8.2.1
+RUN	url="https://www.mysqueezebox.com/update/?version=8.2.1&revision=1&geturl=1&os=deb" && \
+	latest_lms=$(wget -q -O - "$url") && \
+	mkdir -p /sources && \
+	cd /sources && \
+	wget $latest_lms && \
+	lms_deb=${latest_lms##*/} && \
+	dpkg -i $lms_deb
 
 
 RUN	chmod -R +x /etc/service/lms /etc/my_init.d/
