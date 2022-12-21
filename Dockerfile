@@ -23,7 +23,8 @@ RUN	apt-get update && \
 	apt-get -y dist-upgrade -o Dpkg::Options::="--force-confold" && \
 	apt-get install -y lame faad flac sox perl wget tzdata pv && \
 	apt-get install -y libio-socket-ssl-perl libcrypt-ssleay-perl && \
-	apt-get install -y openssl libcrypt-openssl-bignum-perl libcrypt-openssl-random-perl libcrypt-openssl-rsa-perl
+	apt-get install -y openssl libcrypt-openssl-bignum-perl libcrypt-openssl-random-perl libcrypt-openssl-rsa-perl && \
+	apt-get install -y libgomp1 libwww-perl libfont-freetype-perl liblinux-inotify2-perl libdata-dump-perl libio-socket-ssl-perl libnet-ssleay-perl libcrypt-ssleay-perl
 
 # Get latest build - no longer available for 7.9.2 but kept for future minor/major versions
 # RUN	url="http://www.mysqueezebox.com/update/?version=7.9.2&revision=1&geturl=1&os=deb" && \
