@@ -44,7 +44,7 @@ RUN	apt-get update && \
 # 	dpkg -i $lms_deb
 
 # Get latest build for 8.2.1
-RUN	url="https://www.mysqueezebox.com/update/?version=8.2.1&revision=1&geturl=1&os=deb" && \
+RUN	url="https://www.mysqueezebox.com/update/?version=8.3.1&revision=1&geturl=1&os=deb" && \
 	latest_lms=$(wget -q -O - "$url") && \
 	mkdir -p /sources && \
 	cd /sources && \
